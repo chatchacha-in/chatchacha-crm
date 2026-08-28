@@ -67,6 +67,14 @@ If either of these ever get reset (e.g. a new Supabase project, a dashboard misc
 
 No client had generated an API key yet at the time of this change, so nothing existing was invalidated. `docs/public-api.md`, `docs/mcp.md`, and the `mcp-server/` docs still show `wacrm_live_` in their examples — intentionally left as-is for now, cosmetic only.
 
+| File | What changed | Date |
+|------|-------------|------|
+| `src/lib/webhooks/deliver.ts` | Outbound webhook headers renamed: `X-Wacrm-Event` → `X-ChatChacha-Event`, `X-Wacrm-Webhook-Id` → `X-ChatChacha-Webhook-Id`, `X-Wacrm-Signature` → `X-ChatChacha-Signature`. | 2026-08-29 |
+| `src/lib/webhooks/deliver.test.ts` | Assertions updated to match the new header names. | 2026-08-29 |
+| `src/lib/webhooks/sign.ts`, `src/app/api/v1/webhooks/route.ts` | Comments referencing the header names / product name updated to match. | 2026-08-29 |
+
+No client had a webhook endpoint registered yet at the time of this change. `docs/public-api.md` and the upstream `CHANGELOG.md` still show `X-Wacrm-*` — left as-is (docs + historical record), same reasoning as above.
+
 ## Reverted / not currently applied
 
 **Invite-only signup** — a guard in `src/app/(auth)/signup/page.tsx` reading
