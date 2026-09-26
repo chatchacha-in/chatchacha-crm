@@ -75,6 +75,27 @@ No client had generated an API key yet at the time of this change, so nothing ex
 
 No client had a webhook endpoint registered yet at the time of this change. `docs/public-api.md` and the upstream `CHANGELOG.md` still show `X-Wacrm-*` — left as-is (docs + historical record), same reasoning as above.
 
+User-facing strings that arrived with the 2026-09-26 upstream sync:
+
+| File | What changed | Date |
+|------|-------------|------|
+| `messages/en.json` | `SignupPage.desc` → "Get started with Chat Chacha"; `fallbackAccountName` → "our Chat Chacha account". | 2026-09-26 |
+| `src/lib/whatsapp/meta-error-explain.ts` | Two WhatsApp connection error messages say "Chat Chacha" instead of "wacrm". Commented `CHATCHACHA CUSTOM`. | 2026-09-26 |
+
+Internal identifiers (`wacrm:browser-notifications` storage key, `wacrm-test-notification` tag) are never shown to users — left as upstream.
+
+## Deployment
+
+| File | What changed | Date |
+|------|-------------|------|
+| `.github/workflows/deploy.yml` | Added `set -e` (stop on first failure, so PM2 is not restarted on a broken build) and `npm ci` before the build (package updates previously never reached the server). | 2026-09-26 |
+
+## Upstream syncs
+
+| Date | Upstream commit | Notes |
+|------|-----------------|-------|
+| 2026-09-26 | `aee1b01` | 24 changes incl. Next.js 16.3.5 security patch, WhatsApp username (BSUID) support, `+` country code required on typed numbers. Migrations 040–042 applied. |
+
 ## Reverted / not currently applied
 
 **Invite-only signup** — a guard in `src/app/(auth)/signup/page.tsx` reading
