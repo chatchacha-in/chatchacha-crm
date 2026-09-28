@@ -13,7 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { MessageSquare, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState("");
@@ -84,7 +84,12 @@ export default function ResetPasswordPage() {
       <Card className="w-full max-w-md border-border bg-card">
         <CardHeader className="items-center text-center">
           <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-            <MessageSquare className="h-6 w-6 text-primary" />
+            {/* CHATCHACHA CUSTOM — brand logo */}
+            <img
+              src="/logo.png"
+              alt="Chat Chacha"
+              className="h-8 w-8 object-contain"
+            />
           </div>
           <CardTitle className="text-xl text-foreground">
             Set a new password

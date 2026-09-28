@@ -13,6 +13,8 @@ updates, these are the files to protect. See UPSTREAM_SYNC.md for the process.
 | `src/app/(auth)/login/page.tsx` | Brand mark replaced with `/logo.png` | 2026-08-13 |
 | `src/app/(auth)/signup/page.tsx` | Brand mark replaced with `/logo.png` | 2026-08-13 |
 | `src/app/icon.tsx` | **Deleted** — generated purple favicon | 2026-08-13 |
+| `src/app/(auth)/forgot-password/page.tsx` | Brand mark replaced with `/logo.png` | 2026-09-28 |
+| `src/app/(auth)/reset-password/page.tsx` | Brand mark replaced with `/logo.png` | 2026-09-28 |
 
 All brand-mark edits are commented `CHATCHACHA CUSTOM` in the source.
 
