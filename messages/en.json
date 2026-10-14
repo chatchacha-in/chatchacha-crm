@@ -1504,7 +1504,8 @@
       "labelTooLong": "Label must be {max} characters or fewer",
       "copied": "Invite link copied",
       "clipboardBlocked": "Clipboard blocked — copy the link manually",
-      "whatsappMessage": "Join {accountName} on Chat Chacha using this link (valid for {expiresInDays} days): {url}"
+      "whatsappMessage": "Join {accountName} on Chat Chacha using this link (valid for {expiresInDays} days): {url}",
+      "createFailed": "Failed to create invitation"
     },
     "tagsAndFields": {
       "title": "Fields & tags",
